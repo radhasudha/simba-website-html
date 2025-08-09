@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs • Simba AI Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="container">
+      <div class="logo">Simba AI Academy</div>
+      <div class="email">
+        <svg height="21" width="27" viewBox="0 0 27 21" xmlns="http://www.w3.org/2000/svg" class="email-icon"><path d="M24.009 0H2.99C1.341 0 0 1.322 0 2.946v15.108C0 19.679 1.342 21 2.991 21h21.018C25.659 21 27 19.679 27 18.054V2.946C27 1.321 25.658 0 24.009 0zM2.99 1.416h21.018c.16 0 .32.025.474.075l-9.91 9.99a1.502 1.502 0 01-1.073.448c-.406 0-.787-.16-1.073-.447L2.517 1.49c.153-.05.313-.075.474-.075zM1.438 18.054V2.946c0-.151.023-.302.069-.447l8.005 8.07-7.969 8.035a1.495 1.495 0 01-.105-.55zm22.57 1.53H2.992a1.58 1.58 0 01-.366-.044l7.892-7.957.88.888a2.94 2.94 0 002.103.874 2.94 2.94 0 002.103-.874l.88-.888 7.892 7.957a1.545 1.545 0 01-.366.044zm1.554-1.53c0 .189-.036.375-.106.55l-7.968-8.034 8.006-8.071c.045.145.068.295.068.447v15.108z" fill="#595959" fill-rule="nonzero"></path></svg>
+        <span class="email-text">sudhakar.pasupuleti@gmail.com</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <button id="nav-toggle" class="hamburger" aria-controls="nav-links" aria-expanded="false">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a class="active" href="services.html">Programs</a></li>
+        <li><a href="index.html#about">Team</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="services" class="services">
+      <div class="container">
+       
+
+        <!-- Box A: 3-Year Program -->
+        <section class="services-box" aria-labelledby="box-3yr-title">
+          <header class="services-box__header">
+            <h2 id="box-3yr-title" class="services-box__title">3-Year Program</h2>
+            <p class="services-box__sub">Progressive curriculum from foundations to full-stack</p>
+          </header>
+          <div class="services-grid">
+            <!-- Year 1 -->
+            <article class="course-card" role="region" aria-labelledby="c1-title">
+              <img class="course-card__img" src="assets/images/year-1.png" alt="Foundations of Web Development banner"/>
+              <div class="course-card__body">
+                <h3 id="c1-title" class="course-card__title">Year 1: Foundations of Web Development</h3>
+                <p class="course-card__meta"><strong>Target Students:</strong> Grades 9–12</p>
+                <p class="course-card__desc"><strong>Outcome:</strong> Build and host a fully functional static website using HTML, CSS, Git, and basic design principles, with an introduction to AI tools.</p>
+                <p class="course-card__duration"><strong>Duration:</strong> 12 months</p>
+                <button class="btn btn--primary course-card__btn" data-modal-target="#course1" aria-label="View more about Year 1: Foundations of Web Development">View More</button>
+              </div>
+            </article>
+
+            <!-- Year 2 -->
+            <article class="course-card" role="region" aria-labelledby="c2-title">
+              <img class="course-card__img" src="assets/images/year-2.png" alt="Dynamic Web Development banner"/>
+              <div class="course-card__body">
+                <h3 id="c2-title" class="course-card__title">Year 2: Dynamic Web Development with JavaScript, Python & Databases</h3>
+                <p class="course-card__meta"><strong>Target Students:</strong> Graduates of Year 1 or those with basic web development knowledge</p>
+                <p class="course-card__desc"><strong>Outcome:</strong> Build fully functional dynamic web applications using JavaScript (frontend) and Python with SQL (backend), concluding with an introduction to React.</p>
+                <p class="course-card__duration"><strong>Duration:</strong> 12 Months</p>
+                <button class="btn btn--primary course-card__btn" data-modal-target="#course2" aria-label="View more about Year 2 program">View More</button>
+              </div>
+            </article>
+
+            <!-- Year 3 -->
+            <article class="course-card" role="region" aria-labelledby="c3-title">
+              <img class="course-card__img" src="assets/images/year-3.png" alt="Full-Stack + AI Tools banner"/>
+              <div class="course-card__body">
+                <h3 id="c3-title" class="course-card__title">Year 3: Full-Stack Development with Python Backend & AI Tools</h3>
+                <p class="course-card__meta"><strong>Target Students:</strong> Graduates of Year 2 or those with strong web development skills</p>
+                <p class="course-card__desc"><strong>Outcome:</strong> Build advanced full-stack applications using React, Next.js, and Python backend, with integration of AI tools for automation and enhanced functionality.</p>
+                <p class="course-card__duration"><strong>Duration:</strong> 12 Months</p>
+                <button class="btn btn--primary course-card__btn" data-modal-target="#course3" aria-label="View more about Year 3 program">View More</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Box B: Specialized Courses -->
+        <section class="services-box" aria-labelledby="box-spec-title">
+          <header class="services-box__header">
+            <h2 id="box-spec-title" class="services-box__title">Specialized Courses</h2>
+            <p class="services-box__sub">Short-term courses for rapid career growth</p>
+          </header>
+          <div class="services-grid">
+            <!-- Java Fullstack -->
+            <article class="course-card" role="region" aria-labelledby="c4-title">
+              <img class="course-card__img" src="assets/images/java-full-stack.png" alt="Java Fullstack Developer banner"/>
+              <div class="course-card__body">
+                <h3 id="c4-title" class="course-card__title">Java Fullstack Developer</h3>
+                <p class="course-card__desc"><strong>Outcome:</strong> Build end-to-end Java apps with Spring, REST APIs, and deployment basics.</p>
+                <p class="course-card__duration"><strong>Duration:</strong> 5 Months</p>
+                <button class="btn btn--primary course-card__btn" data-modal-target="#course4" aria-label="View more about Java Fullstack Developer">View More</button>
+              </div>
+            </article>
+
+            <!-- Spring Boot with Microservices -->
+            <article class="course-card" role="region" aria-labelledby="c5-title">
+              <img class="course-card__img" src="assets/images/spring-boot.png" alt="Spring Boot with Microservices banner"/>
+              <div class="course-card__body">
+                <h3 id="c5-title" class="course-card__title">Spring Boot with Microservices</h3>
+                <p class="course-card__desc"><strong>Outcome:</strong> Design, build, and deploy microservices with Spring Boot, REST, and service discovery.</p>
+                <p class="course-card__duration"><strong>Duration:</strong> 3 Months</p>
+                <button class="btn btn--primary course-card__btn" data-modal-target="#course5" aria-label="View more about Spring Boot with Microservices">View More</button>
+              </div>
+            </article>
+
+            <!-- React & Next.js Developer (NEW) -->
+            <article class="course-card" role="region" aria-labelledby="c6-title">
+              <img class="course-card__img" src="assets/images/react.png" alt="React JS & Next.js Developer banner"/>
+              <div class="course-card__body">
+                <h3 id="c6-title" class="course-card__title">React JS & Next.js Developer</h3>
+                <p class="course-card__desc"><strong>Outcome:</strong> Build modern, SEO‑friendly SPAs and SSR apps using React, Next.js, routing, data fetching, and deployment.</p>
+                <p class="course-card__duration"><strong>Duration:</strong> 4 Months</p>
+                <button class="btn btn--primary course-card__btn" data-modal-target="#course6" aria-label="View more about React JS & Next.js Developer">View More</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="course1" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3>Year 1: Foundations of Web Development</h3>
+      <p>Goal: Build and host a static website using HTML, CSS, Git and basic design, with a glimpse of AI tools.</p>
+      <h4>Topics</h4>
+      <ul>
+        <li>Web fundamentals: HTML5, semantic tags, forms</li>
+        <li>CSS basics: layout, flexbox, responsive design</li>
+        <li>Git & GitHub: version control and hosting</li>
+        <li>Intro to AI tools for productivity</li>
+      </ul>
+      <p><strong>Duration:</strong> 12 Months</p>
+    </div>
+  </div>
+
+  <div id="course2" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3>Year 2: Dynamic Web Development with JS, Python & Databases</h3>
+      <p>Goal: Build dynamic applications with JS frontend and Python + SQL backend; end with an intro to React.</p>
+      <h4>Topics</h4>
+      <ul>
+        <li>Advanced JS: fetch, modules, routing basics</li>
+        <li>Python web: FastAPI/Flask fundamentals</li>
+        <li>Databases: SQL, schema design, CRUD</li>
+        <li>Intro to React components</li>
+      </ul>
+      <p><strong>Duration:</strong> 12 Months</p>
+    </div>
+  </div>
+
+  <div id="course3" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3>Year 3: Full‑Stack + Python Backend + AI Tools</h3>
+      <p>Goal: Build full‑stack apps with React, Next.js, Python backend and integrate AI tools.</p>
+      <h4>Topics</h4>
+      <ul>
+        <li>React & Next.js: routing, data fetching</li>
+        <li>Backend APIs with Python</li>
+        <li>Authentication, sessions</li>
+        <li>AI integrations and automation</li>
+      </ul>
+      <p><strong>Duration:</strong> 12 Months</p>
+    </div>
+  </div>
+
+  <div id="course4" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3>Java Fullstack Developer</h3>
+      <h4>Topics</h4>
+      <ul>
+        <li>Core Java, OOP</li>
+        <li>Spring Boot REST APIs</li>
+        <li>Frontend basics and integration</li>
+        <li>Database integration and deployment</li>
+      </ul>
+      <p><strong>Duration:</strong> 5 Months</p>
+    </div>
+  </div>
+
+  <div id="course5" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3>Spring Boot with Microservices</h3>
+      <h4>Topics</h4>
+      <ul>
+        <li>Spring Boot fundamentals</li>
+        <li>REST, messaging and service discovery</li>
+        <li>Docker basics</li>
+        <li>Observability and resilience patterns</li>
+      </ul>
+      <p><strong>Duration:</strong> 3 Months</p>
+    </div>
+  </div>
+
+  <div id="course6" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <h3>React JS & Next.js Developer</h3>
+      <h4>Topics</h4>
+      <ul>
+        <li>React: components, state, hooks</li>
+        <li>Next.js: routing, layouts, data fetching</li>
+        <li>SSR/SSG and SEO fundamentals</li>
+        <li>Deployment workflows</li>
+      </ul>
+      <p><strong>Duration:</strong> 4 Months</p>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
