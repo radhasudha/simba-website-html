@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simba AI Academy - Build Your Tech Career</title>
+    <title>Ankura AI Academy - Build Your Tech Career</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +11,10 @@
     <!-- Top Header Bar -->
     <div class="top-bar">
         <div class="container">
-            <div class="logo">Simba AI Academy</div>
+            <div class="logo">
+                <img src="assets/images/ankura-text-logo.png" alt="Ankura" class="logo__image">
+                <span class="logo__text">AI Academy</span>
+            </div>
             <div class="email">
                 <svg viewBox="0 0 27 21" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h27v21H0zM1 1v19h25V1H1zm2 2h21v15H3V3zm2 2v11h17V5H5zm2 2h13v2H7V7zm0 4h13v2H7v-2zm0 4h8v2H7v-2z"/>
@@ -26,7 +29,7 @@
         <div class="container">
             <ul class="nav-links">
                 <li><a href="#home" class="is-active">HOME</a></li>
-                <li><a href="#programs">PROGRAMS</a></li>
+                <li><a href="#programs">COURSES</a></li>
                 <li><a href="#team">TEAM</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -39,233 +42,137 @@
         <div class="container">
             <div class="hero__content">
                 <h1 class="hero__title">Become tech elite</h1>
-                <p class="hero__subtitle">Join the top 1% in AI & web dev</p>
-                <a href="#programs" class="hero__cta">View programs</a>
+                <p class="hero__subtitle">Join the top 1% in Web Dev & AI</p>
+                <a href="#programs" class="hero__cta">View Courses</a>
             </div>
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="career-section">
+   
+    <!-- NEW: Curriculum Section -->
+    <section id="programs" class="curriculum-section-new">
         <div class="container">
-            <div class="hero-compact">
-                <h2>Build a High-Value Tech Career</h2>
-                <p>Learn from industry experts and build real projects.</p>
+            <header class="curriculum-header-new">
+                <h2 class="curriculum-title-new">Structured learning to build a strong base in <span class="highlight">Web & AI</span></h2>
+            </header>
+            
+            <!-- Level Selection -->
+            <div class="level-selection">
+                <div class="level-card active" data-level="1">
+                    <div class="level-radio active"></div>
+                    <div class="level-content">
+                        <h3 class="level-title">Beginner</h3>
+                        <p class="level-duration">3 Months</p>
+                    </div>
+                </div>
+                <div class="level-card" data-level="2">
+                    <div class="level-radio"></div>
+                    <div class="level-content">
+                        <h3 class="level-title">Intermediate</h3>
+                        <p class="level-duration">3 Months</p>
+                    </div>
+                </div>
+                <div class="level-card" data-level="3">
+                    <div class="level-radio"></div>
+                    <div class="level-content">
+                        <h3 class="level-title">Advanced</h3>
+                        <p class="level-duration">3 Months</p>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Updated 3-Year Program Section -->
-            <section class="curriculum-section" aria-labelledby="program-3yr-title">
-                <header class="curriculum-header">
-                    <h2 id="program-3yr-title" class="curriculum-title">3-Year Program (Flagship Curriculum)</h2>
-                    <p class="curriculum-subtitle">Progressive curriculum from foundations to full-stack</p>
-                </header>
-                <div class="curriculum-grid">
-                    <!-- Year 1 -->
-                    <article class="prog-card prog-card--blue" data-course="year1">
-                        <div class="prog-card__banner">
-                            <h3 class="prog-card__title">Year 1: Foundations of Web Development (Grades 9–12 Entry)</h3>
-                        </div>
-                        <div class="prog-card__content">
-                            <p class="prog-card__description">Learn the building blocks of the web—no prior coding required.</p>
-                            <div class="prog-card__meta">
-                                <span class="prog-meta">
-                                    <span class="prog-meta__icon">⏳</span>
-                                    <span class="prog-meta__text">12 months</span>
-                                </span>
-                            </div>
-                            <button class="prog-card__btn view-more" data-modal-target="#year1Modal" aria-label="View more about Year 1: Foundations of Web Development">View More</button>
-                        </div>
-                    </article>
 
-                    <!-- Year 2 -->
-                    <article class="prog-card prog-card--orange" data-course="year2">
-                        <div class="prog-card__banner">
-                            <h3 class="prog-card__title">Year 2: Dynamic Web Development</h3>
+            <!-- Module Content -->
+            <div class="module-content">
+                <!-- Module Card -->
+                <div class="module-card active" data-level="1">
+                    <div class="module-strip"></div>
+                    <div class="module-header">
+                        <div class="module-header-top">
+                            <span class="module-label">LEVEL - 1</span>
+                            <span class="module-duration">3 Months</span>
                         </div>
-                        <div class="prog-card__content">
-                            <p class="prog-card__description">Level up with logic, databases, and interactivity.</p>
-                            <div class="prog-card__meta">
-                                <span class="prog-meta">
-                                    <span class="prog-meta__icon">⏳</span>
-                                    <span class="prog-meta__text">12 months</span>
-                                </span>
-                            </div>
-                            <button class="prog-card__btn view-more" data-modal-target="#year2Modal" aria-label="View more about Year 2 program">View More</button>
+                        <h3 class="module-title">Foundations of Web Development</h3>
+                    </div>
+                    <div class="module-details-grid">
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Target</h4>
+                            <p class="detail-text">Beginners (Grades 9–12)</p>
                         </div>
-                    </article>
-
-                    <!-- Year 3 -->
-                    <article class="prog-card prog-card--green" data-course="year3">
-                        <div class="prog-card__banner">
-                            <h3 class="prog-card__title">Year 3: Full-Stack Development with AI Tools</h3>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Eligibility</h4>
+                            <p class="detail-text">No prior coding required</p>
                         </div>
-                        <div class="prog-card__content">
-                            <p class="prog-card__description">From advanced coding to career-ready developer.</p>
-                            <div class="prog-card__meta">
-                                <span class="prog-meta">
-                                    <span class="prog-meta__icon">⏳</span>
-                                    <span class="prog-meta__text">12 months</span>
-                                </span>
-                            </div>
-                            <button class="prog-card__btn view-more" data-modal-target="#year3Modal" aria-label="View more about Year 3 program">View More</button>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Learn</h4>
+                            <p class="detail-text">HTML, CSS, basic JavaScript</p>
                         </div>
-                    </article>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Outcome</h4>
+                            <p class="detail-text">Build simple, responsive websites</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            
-            <!-- Specialized Courses Section -->
-            <section class="curriculum-section" aria-labelledby="program-spec-title">
-                <header class="curriculum-header">
-                    <h2 id="program-spec-title" class="curriculum-title">Specialized Courses</h2>
-                    <p class="curriculum-subtitle">Short-term courses for rapid career growth</p>
-                </header>
-                <div class="curriculum-grid">
-                    <!-- Java Fullstack -->
-                    <article class="ai-card ai-card--purple" data-course="java">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">Java Fullstack Developer</h3>
-                        </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Build end-to-end Java applications with Spring, REST APIs, and deployment basics.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">5 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#course4" aria-label="View more about Java Fullstack Developer">View More</button>
-                        </div>
-                    </article>
 
-                    <!-- Spring Boot with Microservices -->
-                    <article class="ai-card ai-card--teal" data-course="spring">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">Spring Boot with Microservices</h3>
+                <!-- Module Card -->
+                <div class="module-card" data-level="2">
+                    <div class="module-strip"></div>
+                    <div class="module-header">
+                        <div class="module-header-top">
+                            <span class="module-label">LEVEL - 2</span>
+                            <span class="module-duration">3 Months</span>
                         </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Design, build, and deploy microservices with Spring Boot, REST, and service discovery.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">3 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#course5" aria-label="View more about Spring Boot with Microservices">View More</button>
+                        <h3 class="module-title">Dynamic Web Development</h3>
+                    </div>
+                    <div class="module-details-grid">
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Target</h4>
+                            <p class="detail-text">Students with web basics</p>
                         </div>
-                    </article>
-
-                    <!-- React & Next.js Developer -->
-                    <article class="ai-card ai-card--indigo" data-course="react">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">React JS & Next.js Developer</h3>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Eligibility</h4>
+                            <p class="detail-text">Completion of Level 1 or prior knowledge of HTML/CSS</p>
                         </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Build modern, SEO-friendly SPAs and SSR apps using React, Next.js, and deployment workflows.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">4 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#course6" aria-label="View more about React JS & Next.js Developer">View More</button>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Learn</h4>
+                            <p class="detail-text">JavaScript logic, APIs, databases, Node.js basics</p>
                         </div>
-                    </article>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Outcome</h4>
+                            <p class="detail-text">Develop interactive and dynamic web apps</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            
-            <!-- New AI & Emerging Tech Courses Section -->
-            <section class="curriculum-section" aria-labelledby="program-ai-title">
-                <header class="curriculum-header">
-                    <h2 id="program-ai-title" class="curriculum-title">AI & Emerging Tech Courses</h2>
-                    <p class="curriculum-subtitle">Future-focused courses for Grade 9 upwards</p>
-                </header>
-                <div class="curriculum-grid">
-                    <!-- AI Fundamentals -->
-                    <article class="ai-card ai-card--purple" data-course="ai-fundamentals">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">AI Fundamentals (Beginner)</h3>
-                        </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Core AI concepts and prompt basics for school and study.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">2 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#aiFundamentalsModal" aria-label="View more about AI Fundamentals">View More</button>
-                        </div>
-                    </article>
 
-                    <!-- Prompt Engineering -->
-                    <article class="ai-card ai-card--teal" data-course="prompt-engineering">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">Prompt Engineering (Intermediate)</h3>
+                <!-- Module Card -->
+                <div class="module-card" data-level="3">
+                    <div class="module-strip"></div>
+                    <div class="module-header">
+                        <div class="module-header-top">
+                            <span class="module-label">LEVEL - 3</span>
+                            <span class="module-duration">3 Months</span>
                         </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Design high-quality prompts for coding, content, and research.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">3 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#promptEngineeringModal" aria-label="View more about Prompt Engineering">View More</button>
+                        <h3 class="module-title">Full-Stack Development with AI Tools</h3>
+                    </div>
+                    <div class="module-details-grid">
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Target</h4>
+                            <p class="detail-text">Advanced learners aiming for career skills</p>
                         </div>
-                    </article>
-
-                    <!-- AI Agent Creation -->
-                    <article class="ai-card ai-card--indigo" data-course="ai-agent">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">AI Agent Creation (Inter/Adv)</h3>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Eligibility</h4>
+                            <p class="detail-text">Completion of Level 2 or equivalent coding background</p>
                         </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Build autonomous agents that use tools and APIs.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">4 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#aiAgentModal" aria-label="View more about AI Agent Creation">View More</button>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Learn</h4>
+                            <p class="detail-text">React/Next.js, backend integration, AI coding assistants, deployment</p>
                         </div>
-                    </article>
-
-                    <!-- Generative AI Developer -->
-                    <article class="ai-card ai-card--pink" data-course="gen-ai-dev">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">Generative AI Developer (Advanced)</h3>
+                        <div class="detail-box">
+                            <h4 class="detail-heading">Outcome</h4>
+                            <p class="detail-text">Become a career-ready full-stack developer with portfolio projects</p>
                         </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Build apps with text/image generation using popular APIs.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">4 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#genAiDevModal" aria-label="View more about Generative AI Developer">View More</button>
-                        </div>
-                    </article>
-
-                    <!-- AI for Startups -->
-                    <article class="ai-card ai-card--amber" data-course="ai-startups">
-                        <div class="ai-card__banner">
-                            <h3 class="ai-card__title">AI for Startups & Business (Capstone)</h3>
-                        </div>
-                        <div class="ai-card__content">
-                            <p class="ai-card__description">Use AI to automate marketing, content, and operations.</p>
-                            <div class="ai-card__meta">
-                                <span class="ai-meta">
-                                    <span class="ai-meta__icon">⏳</span>
-                                    <span class="ai-meta__text">3 months</span>
-                                </span>
-                            </div>
-                            <button class="ai-card__btn view-more" data-modal-target="#aiStartupsModal" aria-label="View more about AI for Startups">View More</button>
-                        </div>
-                    </article>
+                    </div>
                 </div>
-            </section>
+            </div>
         </div>
     </section>
 
@@ -297,7 +204,7 @@
                 
                 <div class="spa-team-card" data-member="anita">
                     <div class="spa-team-avatar">
-                        <img src="assets/images/team/anita.jpg" alt="Anita Sharma" width="120" height="120" loading="lazy">
+                        <img src="assets/images/team/anita.jpeg" alt="Anita Sharma" width="120" height="120" loading="lazy">
                     </div>
                     <h3 class="spa-team-name">Anita Sharma</h3>
                     <p class="spa-team-role">Senior Java Developer</p>
@@ -314,7 +221,7 @@
                 
                 <div class="spa-team-card" data-member="rajesh">
                     <div class="spa-team-avatar">
-                        <img src="assets/images/team/rajesh.jpg" alt="Rajesh Kumar" width="120" height="120" loading="lazy">
+                        <img src="assets/images/team/rajesh.jpeg" alt="Rajesh Kumar" width="120" height="120" loading="lazy">
                     </div>
                     <h3 class="spa-team-name">Rajesh Kumar</h3>
                     <p class="spa-team-role">Frontend Specialist</p>
@@ -331,7 +238,7 @@
                 
                 <div class="spa-team-card" data-member="priya">
                     <div class="spa-team-avatar">
-                        <img src="assets/images/team/priya.jpg" alt="Priya Singh" width="120" height="120" loading="lazy">
+                        <img src="assets/images/team/priya.jpeg" alt="Priya Singh" width="120" height="120" loading="lazy">
                     </div>
                     <h3 class="spa-team-name">Priya Singh</h3>
                     <p class="spa-team-role">DevOps Engineer</p>
@@ -438,7 +345,7 @@
         <div class="container">
             <div class="spa-footer-content">
                 <div class="spa-footer-brand">
-                    <h3 class="spa-footer-logo">Simba AI Academy</h3>
+                    <h3 class="spa-footer-logo">Ankura AI Academy</h3>
                     <p class="spa-footer-tagline">Empowering the next generation of tech professionals through expert-led training and hands-on experience.</p>
                 </div>
                 
@@ -473,7 +380,7 @@
             </div>
             
             <div class="spa-footer-bottom">
-                <p>&copy; 2025 Simba AI Academy. All rights reserved.</p>
+                <p>&copy; 2025 Ankura AI Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -493,583 +400,7 @@
         </div>
     </div>
 
-    <!-- 3-Year Program Rich Modals -->
-    <div id="year1Modal" class="modal year-program-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="year1ModalTitle">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__dialog year-program-modal__dialog" role="document">
-            <button class="modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="year-program-modal__header year-program-modal__header--blue">
-                <h2 id="year1ModalTitle">Year 1: Foundations of Web Development (Grades 9–12 Entry)</h2>
-                <p class="year-program-modal__summary">Learn the building blocks of the web. No prior coding required.</p>
-            </div>
-            
-            <div class="year-program-modal__content">
-                <div class="year-program-modal__badges">
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">👥</span>
-                        <span class="year-program-badge__text">Grades 9–12 or absolute beginners</span>
-                    </span>
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">🛠️</span>
-                        <span class="year-program-badge__text">HTML, CSS, Git, basic design, intro to AI tools</span>
-                    </span>
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">🎯</span>
-                        <span class="year-program-badge__text">Launch your first website and publish on GitHub Pages</span>
-                    </span>
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">⏳</span>
-                        <span class="year-program-badge__text">12 months</span>
-                    </span>
-                </div>
-                
-                <div class="year-program-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>Web basics; HTML5 structure</li>
-                        <li>CSS Flexbox/Grid</li>
-                        <li>Responsive & accessibility</li>
-                        <li>Forms & basic validation</li>
-                        <li>Assets management</li>
-                        <li>Git & GitHub</li>
-                        <li>Mini-projects (Portfolio, landing page, blog layout)</li>
-                    </ul>
-                </div>
-                
-                <div class="year-program-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>Personal Portfolio</strong> — deployed and shareable</p>
-                </div>
-                
-                <div class="year-program-modal__ctas">
-                    <a href="#contact" class="year-program-cta year-program-cta--primary" data-action="book-call">
-                        Book a Free Counseling Call
-                    </a>
-                    <a href="curriculum-year1.pdf" class="year-program-cta year-program-cta--secondary" target="_blank" rel="noopener">
-                        Download Detailed Curriculum (PDF)
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Application%20-%20Year%201&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20Year%201.%0AName:%20%0APhone:%20%0A" class="year-program-cta year-program-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="year2Modal" class="modal year-program-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="year2ModalTitle">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__dialog year-program-modal__dialog" role="document">
-            <button class="modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="year-program-modal__header year-program-modal__header--orange">
-                <h2 id="year2ModalTitle">Year 2: Dynamic Web Development</h2>
-                <p class="year-program-modal__summary">Level up with logic, databases, and interactivity.</p>
-            </div>
-            
-            <div class="year-program-modal__content">
-                <div class="year-program-modal__badges">
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">👥</span>
-                        <span class="year-program-badge__text">Year 1 grads or learners with basic web knowledge</span>
-                    </span>
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">🛠️</span>
-                        <span class="year-program-badge__text">JavaScript (ES6), Python, SQL, REST APIs, intro to React</span>
-                    </span>
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">🎯</span>
-                        <span class="year-program-badge__text">Build a dynamic app with database + auth</span>
-                    </span>
-                    <span class="year-program-badge">
-                        <span class="year-program-badge__icon">⏳</span>
-                        <span class="year-program-badge__text">12 months</span>
-                    </span>
-                </div>
-                
-                <div class="year-program-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>Modern JS (DOM, modules, fetch)</li>
-                        <li>Python backend (FastAPI/Flask)</li>
-                        <li>SQL & schema design</li>
-                        <li>Authentication & authorization</li>
-                        <li>API integration</li>
-                        <li>Intro to React</li>
-                        <li>Testing & deployment</li>
-                    </ul>
-                </div>
-                
-                <div class="year-program-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>Task Manager App</strong> — login, CRUD, API</p>
-                </div>
-                
-                <div class="year-program-modal__ctas">
-                    <a href="#contact" class="year-program-cta year-program-cta--primary" data-action="book-call">
-                        Book a Free Counseling Call
-                    </a>
-                    <a href="curriculum-year2.pdf" class="year-program-cta year-program-cta--secondary" target="_blank" rel="noopener">
-                        Download Detailed Curriculum (PDF)
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Application%20-%20Year%202&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20Year%202.%0AName:%20%0APhone:%20%0A" class="year-program-cta year-program-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="year3Modal" class="modal year-program-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="year3ModalTitle">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__dialog year-program-modal__dialog" role="document">
-            <button class="modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="year-program-modal__header year-program-modal__header--green">
-                <h2 id="year3ModalTitle">Year 3: Full-Stack Development with AI Tools</h2>
-                <p class="year-program-modal__summary">From advanced coding to career-ready developer.</p>
-            </div>
-            
-            <div class="year-program-modal__content">
-                <div class="year-program-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>React & Next.js advanced features</li>
-                        <li>API routes & serverless functions</li>
-                        <li>Python microservices</li>
-                        <li>Authentication & role management</li>
-                        <li>Payment integration</li>
-                        <li>Performance optimization</li>
-                        <li>AI add-ons & automation</li>
-                        <li>CI/CD & cloud deployment</li>
-                    </ul>
-                </div>
-                
-                <div class="year-program-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>SaaS App with AI feature</strong> — paywall + dashboard</p>
-                </div>
-                
-                <div class="year-program-modal__ctas">
-                    <a href="#contact" class="year-program-cta year-program-cta--primary" data-action="book-call">
-                        Book a Free Counseling Call
-                    </a>
-                    <a href="curriculum-year3.pdf" class="year-program-cta year-program-cta--secondary" target="_blank" rel="noopener">
-                        Download Detailed Curriculum (PDF)
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Application%20-%20Year%203&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20Year%203.%0AName:%20%0APhone:%20%0A" class="year-program-cta year-program-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="course4" class="modal curriculum-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__dialog curriculum-modal__dialog" role="document">
-            <button class="modal__close" data-close aria-label="Close">×</button>
-            <div class="curriculum-modal__header curriculum-modal__header--purple">
-                <h3>Java Fullstack Developer</h3>
-            </div>
-            <div class="curriculum-modal__content">
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">🎯</span> Goal</h4>
-                    <p>Build end-to-end Java applications with Spring, REST APIs, and deployment basics.</p>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">👥</span> Target Students</h4>
-                    <p>Developers with basic programming knowledge looking to specialize in Java</p>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">📚</span> Topics</h4>
-                    <ul>
-                        <li>Core Java, OOP principles</li>
-                        <li>Spring Boot REST APIs</li>
-                        <li>Frontend basics and integration</li>
-                        <li>Database integration and deployment</li>
-                    </ul>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">⏳</span> Duration</h4>
-                    <p><strong>5 Months</strong> - Intensive Java specialization</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="course5" class="modal curriculum-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__dialog curriculum-modal__dialog" role="document">
-            <button class="modal__close" data-close aria-label="Close">×</button>
-            <div class="curriculum-modal__header curriculum-modal__header--teal">
-                <h3>Spring Boot with Microservices</h3>
-            </div>
-            <div class="curriculum-modal__content">
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">🎯</span> Goal</h4>
-                    <p>Design, build, and deploy microservices with Spring Boot, REST, and service discovery.</p>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">👥</span> Target Students</h4>
-                    <p>Java developers with Spring Boot experience</p>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">📚</span> Topics</h4>
-                    <ul>
-                        <li>Spring Boot fundamentals</li>
-                        <li>REST, messaging and service discovery</li>
-                        <li>Docker basics</li>
-                        <li>Observability and resilience patterns</li>
-                    </ul>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">⏳</span> Duration</h4>
-                    <p><strong>3 Months</strong> - Focused microservices training</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="course6" class="modal curriculum-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal__overlay" data-close></div>
-        <div class="modal__dialog curriculum-modal__dialog" role="document">
-            <button class="modal__close" data-close aria-label="Close">×</button>
-            <div class="curriculum-modal__header curriculum-modal__header--indigo">
-                <h3>React JS & Next.js Developer</h3>
-            </div>
-            <div class="curriculum-modal__content">
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">🎯</span> Goal</h4>
-                    <p>Build modern, SEO‑friendly SPAs and SSR apps using React, Next.js, and deployment workflows.</p>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">👥</span> Target Students</h4>
-                    <p>Frontend developers with JavaScript experience</p>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">📚</span> Topics</h4>
-                    <ul>
-                        <li>React: components, state, hooks</li>
-                        <li>Next.js: routing, layouts, data fetching</li>
-                        <li>SSR/SSG and SEO fundamentals</li>
-                        <li>Deployment workflows</li>
-                    </ul>
-                </div>
-                <div class="curriculum-modal__section">
-                    <h4><span class="curriculum-modal__icon">⏳</span> Duration</h4>
-                    <p><strong>4 Months</strong> - Modern React development</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- AI Course Modals -->
-    <div id="aiFundamentalsModal" class="ai-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aiFundamentalsModalTitle">
-        <div class="ai-modal__overlay" data-close></div>
-        <div class="ai-modal__dialog" role="document">
-            <button class="ai-modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="ai-modal__header ai-modal__header--purple">
-                <h2 id="aiFundamentalsModalTitle">AI Fundamentals (Beginner)</h2>
-                <p class="ai-modal__summary">Core AI concepts and prompt basics for school and study.</p>
-            </div>
-            
-            <div class="ai-modal__content">
-                <div class="ai-modal__badges">
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎓</span>
-                        <span class="ai-badge__text">Grade 9+ with basic computer knowledge</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🛠️</span>
-                        <span class="ai-badge__text">AI landscape, safety, ChatGPT basics, prompt patterns</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎯</span>
-                        <span class="ai-badge__text">Create effective AI prompts for learning and productivity</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">⏳</span>
-                        <span class="ai-badge__text">2 months</span>
-                    </span>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>What AI can/can't do; ethics</li>
-                        <li>Prompt structures & roles</li>
-                        <li>Few-shot prompting; critique & refine</li>
-                        <li>Study aids & research workflows</li>
-                        <li>AI for writing & presentations</li>
-                    </ul>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>AI-powered study assistant</strong></p>
-                </div>
-                
-                <div class="ai-modal__ctas">
-                    <a href="#contact" class="ai-cta ai-cta--primary" data-action="book-call">
-                        Book Call
-                    </a>
-                    <a href="ai-fundamentals.pdf" class="ai-cta ai-cta--secondary" target="_blank" rel="noopener">
-                        Download PDF
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Apply%20-%20AI%20Fundamentals&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20AI%20Fundamentals.%0AName:%20%0APhone:%20%0A" class="ai-cta ai-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="promptEngineeringModal" class="ai-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="promptEngineeringModalTitle">
-        <div class="ai-modal__overlay" data-close></div>
-        <div class="ai-modal__dialog" role="document">
-            <button class="ai-modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="ai-modal__header ai-modal__header--teal">
-                <h2 id="promptEngineeringModalTitle">Prompt Engineering (Intermediate)</h2>
-                <p class="ai-modal__summary">Design high-quality prompts for coding, content, and research.</p>
-            </div>
-            
-            <div class="ai-modal__content">
-                <div class="ai-modal__badges">
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎓</span>
-                        <span class="ai-badge__text">High school/college students with some programming or Year 1</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🛠️</span>
-                        <span class="ai-badge__text">Role prompting, chain-of-thought scaffolds, evaluation</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎯</span>
-                        <span class="ai-badge__text">Build advanced AI chat assistants</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">⏳</span>
-                        <span class="ai-badge__text">3 months</span>
-                    </span>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>Task decomposition, guardrails</li>
-                        <li>Few-shot & style transfer</li>
-                        <li>Toolformer-style prompting (concept)</li>
-                        <li>Evaluating outputs & rubric design</li>
-                        <li>Small automation scripts</li>
-                    </ul>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>Custom AI tutor for one subject</strong></p>
-                </div>
-                
-                <div class="ai-modal__ctas">
-                    <a href="#contact" class="ai-cta ai-cta--primary" data-action="book-call">
-                        Book Call
-                    </a>
-                    <a href="prompt-engineering.pdf" class="ai-cta ai-cta--secondary" target="_blank" rel="noopener">
-                        Download PDF
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Apply%20-%20Prompt%20Engineering&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20Prompt%20Engineering.%0AName:%20%0APhone:%20%0A" class="ai-cta ai-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="aiAgentModal" class="ai-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aiAgentModalTitle">
-        <div class="ai-modal__overlay" data-close></div>
-        <div class="ai-modal__dialog" role="document">
-            <button class="ai-modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="ai-modal__header ai-modal__header--indigo">
-                <h2 id="aiAgentModalTitle">AI Agent Creation (Inter/Adv)</h2>
-                <p class="ai-modal__summary">Build autonomous agents that use tools and APIs.</p>
-            </div>
-            
-            <div class="ai-modal__content">
-                <div class="ai-modal__badges">
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎓</span>
-                        <span class="ai-badge__text">Senior students/college learners</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🛠️</span>
-                        <span class="ai-badge__text">Agent loops, tools, memory, retrieval, API chaining</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎯</span>
-                        <span class="ai-badge__text">Research/assistant agent that completes tasks</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">⏳</span>
-                        <span class="ai-badge__text">4 months</span>
-                    </span>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>Agent design & planning</li>
-                        <li>Tool calling & web retrieval (safe patterns)</li>
-                        <li>State & memory strategies</li>
-                        <li>Evaluation & safety checks</li>
-                        <li>Deploying a simple agent service</li>
-                    </ul>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>Research assistant agent</strong></p>
-                </div>
-                
-                <div class="ai-modal__ctas">
-                    <a href="#contact" class="ai-cta ai-cta--primary" data-action="book-call">
-                        Book Call
-                    </a>
-                    <a href="ai-agent.pdf" class="ai-cta ai-cta--secondary" target="_blank" rel="noopener">
-                        Download PDF
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Apply%20-%20AI%20Agent%20Creation&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20AI%20Agent%20Creation.%0AName:%20%0APhone:%20%0A" class="ai-cta ai-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="genAiDevModal" class="ai-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="genAiDevModalTitle">
-        <div class="ai-modal__overlay" data-close></div>
-        <div class="ai-modal__dialog" role="document">
-            <button class="ai-modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="ai-modal__header ai-modal__header--pink">
-                <h2 id="genAiDevModalTitle">Generative AI Developer (Advanced)</h2>
-                <p class="ai-modal__summary">Build apps with text/image generation using popular APIs.</p>
-            </div>
-            
-            <div class="ai-modal__content">
-                <div class="ai-modal__badges">
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎓</span>
-                        <span class="ai-badge__text">College students & professionals</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🛠️</span>
-                        <span class="ai-badge__text">OpenAI APIs, LangChain, HuggingFace basics, images</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎯</span>
-                        <span class="ai-badge__text">Launch a web app with integrated AI features</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">⏳</span>
-                        <span class="ai-badge__text">4 months</span>
-                    </span>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>Chat & completion APIs</li>
-                        <li>Prompt templates & chains</li>
-                        <li>Retrieval-augmented generation (RAG)</li>
-                        <li>Image generation & moderation</li>
-                        <li>Hosting & cost control</li>
-                    </ul>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>AI Resume Builder app</strong></p>
-                </div>
-                
-                <div class="ai-modal__ctas">
-                    <a href="#contact" class="ai-cta ai-cta--primary" data-action="book-call">
-                        Book Call
-                    </a>
-                    <a href="gen-ai-dev.pdf" class="ai-cta ai-cta--secondary" target="_blank" rel="noopener">
-                        Download PDF
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Apply%20-%20Generative%20AI%20Developer&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20Generative%20AI%20Developer.%0AName:%20%0APhone:%20%0A" class="ai-cta ai-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="aiStartupsModal" class="ai-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aiStartupsModalTitle">
-        <div class="ai-modal__overlay" data-close></div>
-        <div class="ai-modal__dialog" role="document">
-            <button class="ai-modal__close" data-close aria-label="Close modal">×</button>
-            
-            <div class="ai-modal__header ai-modal__header--amber">
-                <h2 id="aiStartupsModalTitle">AI for Startups & Business (Capstone)</h2>
-                <p class="ai-modal__summary">Use AI to automate marketing, content, and operations.</p>
-            </div>
-            
-            <div class="ai-modal__content">
-                <div class="ai-modal__badges">
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎓</span>
-                        <span class="ai-badge__text">Final-year/career-changers/founders</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🛠️</span>
-                        <span class="ai-badge__text">No-code/low-code AI, automation workflows, analytics</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">🎯</span>
-                        <span class="ai-badge__text">Mini startup MVP with AI automation</span>
-                    </span>
-                    <span class="ai-badge">
-                        <span class="ai-badge__icon">⏳</span>
-                        <span class="ai-badge__text">3 months</span>
-                    </span>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>📚 Syllabus</h3>
-                    <ul>
-                        <li>Market research with AI</li>
-                        <li>Content/ads automation</li>
-                        <li>Lead capture chatbots</li>
-                        <li>Basic dashboards & analytics</li>
-                        <li>Pitch + demo day</li>
-                    </ul>
-                </div>
-                
-                <div class="ai-modal__section">
-                    <h3>🚀 Final Project</h3>
-                    <p><strong>Automated e-commerce helper or marketing dashboard</strong></p>
-                </div>
-                
-                <div class="ai-modal__ctas">
-                    <a href="#contact" class="ai-cta ai-cta--primary" data-action="book-call">
-                        Book Call
-                    </a>
-                    <a href="ai-startups.pdf" class="ai-cta ai-cta--secondary" target="_blank" rel="noopener">
-                        Download PDF
-                    </a>
-                    <a href="mailto:sudhakar.pasupuleti@gmail.com?subject=Apply%20-%20AI%20for%20Startups&body=Hi%20Simba%20Team,%0A%0AI'd%20like%20to%20apply%20for%20AI%20for%20Startups.%0AName:%20%0APhone:%20%0A" class="ai-cta ai-cta--tertiary">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Team Modal -->
     <div class="modal contact-modal spa-team-modal" id="spaTeamModal" aria-modal="true" role="dialog" aria-labelledby="spaTeamModalTitle" aria-describedby="spaTeamModalDesc" style="display: none;">
         <div class="modal__overlay"></div>
@@ -1141,7 +472,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Simba AI Academy",
+      "name": "Ankura AI Academy",
       "url": "https://example.com",
       "logo": "https://example.com/assets/images/logo.png",
       "description": "Empowering the next generation of tech professionals through expert-led training and hands-on experience",
