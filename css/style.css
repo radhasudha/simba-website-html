@@ -2808,6 +2808,10 @@ body {
     padding: 6px;
     gap: 2px; /* Even smaller gap to fit all cards */
     margin-bottom: 20px;
+    display: flex !important; /* Ensure flexbox on mobile */
+    flex-direction: row;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -2908,6 +2912,8 @@ body {
     min-width: 110px; /* Ultra-optimized for smallest screens */
     max-width: 110px;
     padding: 12px 6px; /* Minimal padding */
+    flex-shrink: 0; /* Prevent shrinking */
+    scroll-snap-align: center; /* Center snap for better UX */
   }
   
   .level-title {
@@ -3261,6 +3267,56 @@ body {
 
 /* Mobile breakpoint for better alignment */
 @media (max-width: 480px) {
+  .module-header-top {
+    gap: 8px; /* Reduced gap for mobile */
+    margin-bottom: 16px; /* Ensure separation from title */
+  }
+  
+  .module-label {
+    font-size: 12px; /* Slightly smaller for mobile */
+    padding: 6px 12px; /* Reduced padding for mobile */
+    height: 28px; /* Consistent height for mobile */
+    line-height: 1.2;
+  }
+  
+  .module-duration {
+    font-size: 12px; /* Slightly smaller for mobile */
+    padding: 6px 12px; /* Reduced padding for mobile */
+    height: 28px; /* Consistent height for mobile */
+    line-height: 1.2;
+    max-width: 40%; /* Allow slight shrinking if needed */
+  }
+}
+
+/* Mobile breakpoint for better alignment */
+@media (max-width: 480px) {
+  .level-selection {
+    display: flex !important; /* Override grid for mobile */
+    flex-direction: row;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center;
+    gap: 8px; /* Reduced gap for mobile */
+    padding: 8px;
+    margin-bottom: 16px;
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .level-selection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .level-card {
+    min-width: 110px; /* Appropriate width for mobile */
+    max-width: 110px;
+    padding: 14px 8px;
+    flex-shrink: 0; /* Prevent shrinking */
+    scroll-snap-align: center; /* Center snap for better UX */
+  }
+  
   .module-header-top {
     gap: 8px; /* Reduced gap for mobile */
     margin-bottom: 16px; /* Ensure separation from title */
