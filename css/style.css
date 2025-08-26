@@ -950,6 +950,19 @@ body {
   padding-bottom: 60px;
 }
 
+/* Mobile-specific improvements for curriculum section */
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow on mobile */
+  .curriculum-section-new {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure proper spacing for sticky banner */
+  .curriculum-section-new:last-of-type {
+    margin-bottom: 80px;
+  }
+}
+
 /* ===========================
    NEW SPA SECTIONS CSS
    =========================== */
@@ -2564,51 +2577,86 @@ body {
 
 @media (max-width: 768px) {
   .curriculum-section-new {
-    padding: 60px 0;
+    padding: 40px 0 80px 0; /* Add bottom padding for sticky banner safe space */
   }
   
   .curriculum-header-new {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+  }
+  
+  .curriculum-title-new {
+    font-size: clamp(24px, 6vw, 32px); /* Prevent overflow, better mobile scaling */
+    line-height: 1.3;
+    padding: 0 16px; /* Add side padding to prevent edge overflow */
+    word-break: break-word; /* Better word breaking */
   }
   
   .level-selection {
-    margin-bottom: 40px;
-    padding: 12px;
-    gap: 12px;
+    margin-bottom: 32px;
+    padding: 16px;
+    gap: 16px;
     display: flex !important;
     grid-template-columns: unset !important;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .level-selection::-webkit-scrollbar {
+    display: none;
   }
   
   .level-card {
-    min-width: 140px;
-    max-width: 140px;
-    padding: 18px 14px;
+    min-width: 160px; /* Better fit for mobile */
+    max-width: 160px;
+    padding: 20px 16px;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
   
   .level-title {
     font-size: 16px;
+    font-weight: 700;
   }
   
   .level-duration {
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 600;
   }
   
   .module-title {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 16px; /* Add space between header-top and title */
   }
   
   .module-header {
-    padding: 28px 28px 20px 28px;
+    padding: 24px 24px 20px 24px;
+  }
+  
+  .module-header-top {
+    margin-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .module-label {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  
+  .module-duration {
+    font-size: 14px;
+    padding: 6px 12px;
+    align-self: flex-end;
   }
   
   .module-details-grid {
     grid-template-columns: 1fr;
-    padding: 20px 28px 28px 28px;
+    padding: 20px 24px 24px 24px;
     gap: 16px;
   }
   
@@ -2616,66 +2664,14 @@ body {
     padding: 20px;
   }
   
-  .panel-content {
-    padding: 24px;
-  }
-  
-  .panel-header {
-    padding: 20px 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .level-selection {
-    padding: 8px;
-    gap: 8px;
-    display: flex !important;
-    grid-template-columns: unset !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .level-card {
-    min-width: 120px;
-    max-width: 120px;
-    padding: 16px 12px;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-  }
-  
-  .level-title {
-    font-size: 15px;
-  }
-  
-  .level-duration {
-    font-size: 12px;
-  }
-  
-  .module-title {
-    font-size: 24px;
-  }
-  
-  .module-header {
-    padding: 24px 24px 16px 24px;
-  }
-  
-  .module-details-grid {
-    padding: 16px 24px 24px 24px;
-    gap: 12px;
-  }
-  
-  .detail-box {
-    padding: 16px;
-  }
-  
   .detail-heading {
     font-size: 11px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   
   .detail-text {
     font-size: 14px;
+    line-height: 1.5;
   }
   
   .panel-content {
@@ -2684,6 +2680,191 @@ body {
   
   .panel-header {
     padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .curriculum-section-new {
+    padding: 32px 0 80px 0; /* Maintain safe space for sticky banner */
+  }
+  
+  .curriculum-header-new {
+    margin-bottom: 24px;
+  }
+  
+  .curriculum-title-new {
+    font-size: clamp(20px, 7vw, 28px); /* Even better mobile scaling */
+    line-height: 1.4;
+    padding: 0 12px;
+  }
+  
+  .level-selection {
+    padding: 12px;
+    gap: 12px;
+    margin-bottom: 24px;
+    display: flex !important;
+    grid-template-columns: unset !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .level-selection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .level-card {
+    min-width: 140px; /* Better fit for very small screens */
+    max-width: 140px;
+    padding: 18px 14px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  
+  .level-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .level-duration {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .module-title {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-top: 14px;
+  }
+  
+  .module-header {
+    padding: 20px 20px 16px 20px;
+  }
+  
+  .module-header-top {
+    margin-bottom: 14px;
+    gap: 10px;
+  }
+  
+  .module-label {
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+  
+  .module-duration {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  
+  .module-details-grid {
+    grid-template-columns: 1fr;
+    padding: 16px 20px 20px 20px;
+    gap: 14px;
+  }
+  
+  .detail-box {
+    padding: 18px;
+  }
+  
+  .detail-heading {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .detail-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .panel-content {
+    padding: 18px;
+  }
+  
+  .panel-header {
+    padding: 14px 18px;
+  }
+}
+
+/* Extra small mobile devices (360-420px) - MI 12 and similar */
+@media (max-width: 420px) {
+  .curriculum-section-new {
+    padding: 24px 0 80px 0;
+  }
+  
+  .curriculum-header-new {
+    margin-bottom: 20px;
+  }
+  
+  .curriculum-title-new {
+    font-size: clamp(18px, 8vw, 24px);
+    line-height: 1.4;
+    padding: 0 8px;
+    word-spacing: -0.01em;
+  }
+  
+  .level-selection {
+    padding: 10px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .level-card {
+    min-width: 130px;
+    max-width: 130px;
+    padding: 16px 12px;
+  }
+  
+  .level-title {
+    font-size: 14px;
+  }
+  
+  .level-duration {
+    font-size: 12px;
+  }
+  
+  .module-title {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+  
+  .module-header {
+    padding: 18px 18px 14px 18px;
+  }
+  
+  .module-header-top {
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  
+  .module-label {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+  
+  .module-duration {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .module-details-grid {
+    padding: 14px 18px 18px 18px;
+    gap: 12px;
+  }
+  
+  .detail-box {
+    padding: 16px;
+  }
+  
+  .detail-heading {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+  
+  .detail-text {
+    font-size: 12px;
+    line-height: 1.4;
   }
 }
 
