@@ -349,13 +349,18 @@
                 
                 <div class="spa-contact-form">
                     <h3>Send us a Message</h3>
-                    <form id="spaContactForm" class="spa-form">
+                    <form id="spaContactForm" class="spa-form" action="https://script.google.com/macros/s/AKfycbwMg1DLfG0uxHFLN1GSbcSJts6wyQjSEZntbPBupVHR27-EGQRqB7JiaJkAwl8_I7WTJw/exec" method="POST">
                         <div class="spa-form-group">
                             <label for="spaName">Full Name *</label>
-                            <input type="text" id="spaName" name="name" required aria-describedby="spaNameError">
+                            <input type="text" id="spaName" name="fullName" required aria-describedby="spaNameError">
                             <div id="spaNameError" class="spa-error" aria-live="polite"></div>
                         </div>
-                        
+                        <input type="hidden" name="redirect" value="https://adorable-custard-465e20.netlify.app/#contact">
+                        <input type="hidden" name="source" value="ContactForm">
+                        <input type="hidden" name="pageURL" id="contactPageURL">
+                        <input type="text" name="botField" style="position:absolute;left:-9999px;opacity:0">
+
+  
                         <div class="spa-form-group">
                             <label for="spaEmail">Email Address *</label>
                             <input type="email" id="spaEmail" name="email" required aria-describedby="spaEmailError">
@@ -390,6 +395,7 @@
                             <span class="spa-btn-loading" style="display: none;">Sending...</span>
                         </button>
                     </form>
+                    <script>document.getElementById('contactPageURL').value = location.href;</script>
                 </div>
             </div>
         </div>
