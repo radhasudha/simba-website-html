@@ -8,6 +8,55 @@ let allModals = [];
 let isInitialized = false;
 
 // ===========================
+// WHY CHOOSE ANKURA AI ACADEMY SECTION
+// ===========================
+// Initialize why choose section interactions
+function initializeWhyChooseSection() {
+    const cards = document.querySelectorAll('.why-ankura-card');
+    
+    cards.forEach(card => {
+        // Add smooth scroll to programs section for card links
+        const cardLink = card.querySelector('.card-link');
+        if (cardLink) {
+            cardLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const programsSection = document.querySelector('#programs');
+                if (programsSection) {
+                    programsSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
+        
+        // Add click effect for cards
+        card.addEventListener('click', function() {
+            // Add a subtle click animation
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+    
+    // Initialize CTA button
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const programsSection = document.querySelector('#programs');
+            if (programsSection) {
+                programsSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+}
+
+// ===========================
 // HAMBURGER MENU FUNCTIONALITY
 // ===========================
 
@@ -686,6 +735,7 @@ function updateCurriculumPanel(moduleCard) {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(initializeCurriculum, 100);
     initializeHamburger();
+    initializeWhyChooseSection();
 });
 
 // Also initialize on window load as backup
@@ -694,6 +744,7 @@ window.addEventListener('load', () => {
         setTimeout(initializeCurriculum, 200);
     }
     initializeHamburger();
+    initializeWhyChooseSection();
 });
   
   
