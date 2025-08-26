@@ -56,73 +56,7 @@ function initializeWhyChooseSection() {
     }
 }
 
-// ===========================
-// HAMBURGER MENU FUNCTIONALITY
-// ===========================
 
-// Initialize hamburger menu
-function initializeHamburger() {
-    console.log('Initializing hamburger menu...');
-    
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const body = document.body;
-    
-    console.log('Hamburger element:', hamburger);
-    console.log('Nav links element:', navLinks);
-    
-    if (hamburger && navLinks) {
-        console.log('Adding hamburger event listeners...');
-        
-        hamburger.addEventListener('click', function(e) {
-            console.log('Hamburger clicked!');
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            
-            // Toggle menu state
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            
-            // Use classList toggle for better CSS control
-            navLinks.classList.toggle('show');
-            body.classList.toggle('menu-open');
-            
-            // Update hamburger icon
-            hamburger.textContent = isExpanded ? '☰' : '✕';
-            
-            console.log('Menu toggled. Expanded:', !isExpanded);
-            console.log('Nav links classes:', navLinks.className);
-            console.log('Nav links display style:', navLinks.style.display);
-        });
-        
-        // Close menu when clicking on a link
-        const navLinksItems = navLinks.querySelectorAll('a');
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Nav link clicked, closing menu...');
-                navLinks.classList.remove('show');
-                body.classList.remove('menu-open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                hamburger.textContent = '☰';
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-                navLinks.classList.remove('show');
-                body.classList.remove('menu-open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                hamburger.textContent = '☰';
-            }
-        });
-        
-        console.log('Hamburger menu initialized successfully!');
-    } else {
-        console.error('Hamburger or nav-links elements not found!');
-    }
-}
 
 // ===========================
 // MODAL FUNCTIONALITY
@@ -734,7 +668,6 @@ function updateCurriculumPanel(moduleCard) {
 // Initialize curriculum when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(initializeCurriculum, 100);
-    initializeHamburger();
     initializeWhyChooseSection();
 });
 
@@ -743,7 +676,6 @@ window.addEventListener('load', () => {
     if (!document.querySelector('.curriculum-section-new')) {
         setTimeout(initializeCurriculum, 200);
     }
-    initializeHamburger();
     initializeWhyChooseSection();
 });
   

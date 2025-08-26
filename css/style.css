@@ -94,20 +94,11 @@
   z-index: 100;
 }
   .main-nav .container{
-    height: var(--nav-height);
-    display:flex; align-items:center; gap:16px; position:relative;
-  }
-  
-  /* right-align the hamburger */
-  .hamburger{
-    margin-left:auto;
-    display:none;            /* shown on mobile below */
-    background:none; border:0; color:#fff;
-    font-size:28px; line-height:1; cursor:pointer;
-    z-index:2001;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none;
+    height: auto; 
+    min-height: 32px; /* Reduced from 44px to 32px for mobile */
+    padding: 6px 12px; /* Reduced padding from 8px to 6px */
+    flex-direction: column;
+    gap: 6px; /* Reduced gap from 8px to 6px */
   }
   
   /* Desktop navigation - SIMPLIFIED ORIGINAL STYLES */
@@ -156,9 +147,7 @@
     opacity: 1; 
   }
   
-  .hamburger {
-    display: none !important;
-  }
+
 }
 
 /* Hide desktop navigation on mobile - REMOVED DUPLICATE RULE */
@@ -181,60 +170,55 @@
   }
   
   .main-nav .container { 
-    height: 44px; 
-    padding: 0 12px; 
-    overflow: visible;
-  }
-  
-  .hamburger { 
-    display: block !important; 
-    margin-left: auto; 
-    z-index: 2001; 
+    height: auto; 
+    min-height: 32px; /* Reduced from 44px to 32px for mobile */
+    padding: 6px 12px; /* Reduced padding from 8px to 6px */
+    flex-direction: column;
+    gap: 6px; /* Reduced gap from 8px to 6px */
   }
       
-  /* Mobile Navigation Styles */
+  /* Mobile Navigation Styles - Inline Links */
   .nav-links {
-    display: none;
-    position: absolute; 
-    left: 8px; 
-    right: 8px; 
-    top: 100%;
-    background: #fff; 
-    color: #111;
-    border-radius: 8px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,.18);
-    padding: 8px;
-    flex-direction: column; 
-    gap: 6px;
-    list-style: none; 
-    z-index: 2000;
+    display: flex !important;
+    flex-direction: row;
+    gap: 12px; /* Reduced from 16px */
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2px 0; /* Reduced from 4px */
     margin: 0;
-    min-width: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    width: 100%;
+    justify-content: center;
   }
   
-  .nav-links.show { 
-    display: flex !important; 
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
   
   .nav-links li {
     margin: 0;
     padding: 0;
-    width: 100%;
+    flex-shrink: 0;
   }
   
   .nav-links a { 
-    color: #111; 
-    padding: 10px; 
+    color: #fff !important; 
+    padding: 6px 10px; /* Reduced from 8px 12px */
     border-radius: 6px; 
     display: block;
-    width: 100%;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
+    white-space: nowrap;
+    min-height: 32px; /* Reduced from 44px to match container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
   }
   
   .nav-links a:hover { 
-    background: #f2f4f7; 
+    background: rgba(255, 255, 255, 0.1); 
   }
   
   .nav-links a::after { 
@@ -244,7 +228,6 @@
 
 /* Global Navigation Styles */
 .main-nav .container { overflow: visible; }
-body.menu-open { overflow: hidden; }
 
 
 
