@@ -358,6 +358,7 @@
                         <input type="hidden" name="redirect" value="https://adorable-custard-465e20.netlify.app/#contact">
                         <input type="hidden" name="source" value="ContactForm">
                         <input type="hidden" name="pageURL" id="contactPageURL">
+                        <input type="hidden" id="contactExecUrl" value="https://script.google.com/macros/s/AKfycbwMg1DLfG0uxHFLN1GSbcSJts6wyQjSEZntbPBupVHR27-EGQRqB7JiaJkAwl8_I7WTJw/exec">
                         <input type="text" name="botField" style="position:absolute;left:-9999px;opacity:0">
 
   
@@ -394,6 +395,7 @@
                             <span class="spa-btn-text">Send Message</span>
                             <span class="spa-btn-loading" style="display: none;">Sending...</span>
                         </button>
+                        <div id="contactInlineMsg" aria-live="polite" style="margin-top:8px;"></div>
                     </form>
                     <script>document.getElementById('contactPageURL').value = location.href;</script>
                 </div>
@@ -558,5 +560,8 @@
     </script>
 
     <script src="js/script.js"></script>
+    
+    <!-- Global Toast Container -->
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>

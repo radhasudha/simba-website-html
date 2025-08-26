@@ -680,3 +680,163 @@ window.addEventListener('load', () => {
 });
   
   
+// ===========================
+// CONTACT FORM FUNCTIONALITY
+// ===========================
+
+// Initialize contact form functionality
+function initializeContactForm() {
+    console.log('Initializing contact form...');
+    
+    // Select required elements
+    const form = document.getElementById('spaContactForm');
+    if (!form) {
+        console.log('Contact form not found');
+        return;
+    }
+    
+    // Get exec URL from hidden input or fall back to form action
+    const execUrlInput = document.getElementById('contactExecUrl');
+    const execUrl = execUrlInput ? execUrlInput.value : form.action;
+    if (!execUrl) {
+        console.log('No exec URL found');
+        return;
+    }
+    
+    // Get submit button and optional spans
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (!submitBtn) {
+        console.log('Submit button not found');
+        return;
+    }
+    
+    const btnText = submitBtn.querySelector('.spa-btn-text');
+    const btnLoad = submitBtn.querySelector('.spa-btn-loading');
+    const statusEl = document.getElementById('contactInlineMsg');
+    
+    // Form submission handler
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Submitting contact form...');
+        
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        if (btnText) btnText.style.display = 'none';
+        if (btnLoad) btnLoad.style.display = 'inline';
+        if (statusEl) statusEl.textContent = 'Sending...';
+        
+        try {
+            // Get form data and remove any redirect field
+            const formData = new FormData(form);
+            
+            // Remove redirect field if it exists (to prevent Apps Script redirect)
+            if (formData.has('redirect')) {
+                formData.delete('redirect');
+            }
+            
+            console.log('Sending to:', execUrl);
+            
+            // Send POST request to Apps Script
+            const response = await fetch(execUrl, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Required for Google Apps Script
+            });
+            
+            // Since no-cors doesn't return response details, we'll assume success
+            // In a real implementation, you might want to use a different approach
+            console.log('Contact form submitted successfully');
+            
+            // Show success message
+            if (statusEl) {
+                statusEl.textContent = '✅ Thanks! We will call you back shortly.';
+            }
+            
+            // Create and show success toast
+            showToast('✅ Thanks! We will call you back shortly.', 'success');
+            
+            // On small screens, scroll form into view and focus status for accessibility
+            if (window.innerWidth <= 768) {
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (statusEl) {
+                    setTimeout(() => statusEl.focus(), 500);
+                }
+            }
+            
+            // Reset form fields
+            form.reset();
+            
+        } catch (error) {
+            console.error('Error submitting contact form:', error);
+            
+            // Show error message
+            if (statusEl) {
+                statusEl.textContent = '❌ Unable to send right now. Please try again.';
+            }
+            
+            // Create and show error toast
+            showToast('❌ Unable to send right now. Please try again.', 'error');
+            
+        } finally {
+            // Re-enable button and restore spans
+            submitBtn.disabled = false;
+            if (btnText) btnText.style.display = 'inline';
+            if (btnLoad) btnLoad.style.display = 'none';
+        }
+    });
+    
+    console.log('Contact form initialized successfully!');
+}
+
+// Toast notification helper function
+function showToast(message, type = 'info') {
+    const toastRoot = document.getElementById('toast-root');
+    if (!toastRoot) {
+        console.log('Toast root not found, skipping toast');
+        return;
+    }
+    
+    // Remove any existing toasts to ensure only one shows at a time
+    const existingToasts = toastRoot.querySelectorAll('.toast');
+    existingToasts.forEach(toast => toast.remove());
+    
+    // Create new toast element
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    
+    // Append to toast root
+    toastRoot.appendChild(toast);
+    
+    // Trigger animation by adding show class
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+    
+    // Auto-remove after 3500ms
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.remove();
+                }
+            }, 300); // Wait for fade-out animation
+        }
+    }, 3500);
+}
+
+// Initialize contact form when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initializeContactForm();
+});
+
+// Also initialize on window load as backup
+window.addEventListener('load', () => {
+    if (!document.getElementById('spaContactForm')) {
+        setTimeout(initializeContactForm, 100);
+    }
+});
+  
+  
